@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaterController : MonoBehaviour
 {
-    public Rigibody PlayerRigibody; // 이동에 사용할 리디즈바디 컴포넌트
+    public Rigidbody PlayerRigidbody; // 이동에 사용할 리디즈바디 컴포넌트
     public float speed = 8f; // 이동 속력
 
     // bool Input.GetKey(KeyCode key);
