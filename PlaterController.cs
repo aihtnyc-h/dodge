@@ -6,13 +6,15 @@ public class PlaterController : MonoBehaviour
 {
     public Rigibody PlayerRigibody; // 이동에 사용할 리디즈바디 컴포넌트
     public float speed = 8f; // 이동 속력
+
+    // bool Input.GetKey(KeyCode key);
     // Start is called before the first frame update
-    // void Start()
-    // {
-    //     
-    // }
-    //
-    // // Update is called once per frame
+    void Start()
+    {
+        
+    }
+    
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow) == true)
@@ -35,5 +37,10 @@ public class PlaterController : MonoBehaviour
             // 왼쪽 방향키 입력이 감지된 경우 -x 방향 힘 주기
             playerRigibody.AddForce(-speed, 0f, 0f);
         }
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
