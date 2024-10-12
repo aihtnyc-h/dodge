@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletSpawner : MonoBehaviour
-{
+public class BulletSpawner : MonoBehaviour {
     public GameObject bulletPrefab; // 생성할 총알의 원본 프리팹
     public float spawnRateMin = 0.5f; // 최소 생성 주기
     public float spawnRateMax = 3f; // 최대 생성 주기
@@ -11,9 +10,8 @@ public class BulletSpawner : MonoBehaviour
     private Transform target; // 발사할 대상
     private float spawnRate; // 생성 주기
     private float timeAfterSpawn; // 최근 생성 시점에서 지난 시간
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    void Start() {
         // 최근 생성 이후의 누적 시간을 0으로 초기화
         timeAfterSpawn = 0f;
         // 총알 생성 간격을 spawnRateMin과 spawnRateMax 사이에서 랜덤 지정 
@@ -22,9 +20,7 @@ public class BulletSpawner : MonoBehaviour
         target = FindObjectOfType<PlayerController>().transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         // timeAfterSpawn을 갱신
         timeAfterSpawn += Time.deltaTime;
 
